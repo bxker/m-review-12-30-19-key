@@ -23,7 +23,12 @@ export default class Add extends Component {
             product_img: this.state.product_img
         }
         Axios.post('/api/products', newProduct).then((response) => {
-            console.log(response)
+            console.log(response.data)
+        })
+        this.setState({
+            product_name: '',
+            product_price: '',
+            product_img: ''
         })
     }
 
